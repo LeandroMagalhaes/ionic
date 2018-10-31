@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro de Produto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Produto</ion-label>
+      <ion-input type="text" name="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Categoria</ion-label>
+      <ion-select name="categoria_id">
+        <ion-option value="1">Veículos</ion-option>
+        <ion-option value="2">Animais</ion-option>
+        <ion-option value="3">Empregos</ion-option>
+        <ion-option value="4">Imovéis</ion-option>        
+        <ion-option value="5">Eletrônicos</ion-option>
+        <ion-option value="6">Musicas</ion-option>
+        <ion-option value="7">Esportes</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Valor</ion-label>
+      <ion-input type="number" name="valor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descrição</ion-label>
+      <ion-input type="text" name="descricao"></ion-input>
+    </ion-item>
+
+    <ion-fab right top>
+      <button ion-fab color="secondary"><ion-icon name="arrow-dropleft"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab (click)="itemTapped($event)">
+          <ion-icon name="camera"></ion-icon>
+        </button>
+      </ion-fab-list>
+    </ion-fab>
+    <br>
+    <button ion-button color="secondary" (click)="save()">Cadastrar</button>
+
+  </ion-list>
+
+</ion-content>
